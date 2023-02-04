@@ -1,8 +1,8 @@
+
 name: "Django deploy workflow"
 
 on:
-  pull_request:
-    types: [ closed ]
+  push:
     branches:
       - master
 
@@ -30,7 +30,7 @@ jobs:
             docker volume create --name=static
             ls -a
             pwd
-            cd projects/example-final
+            cd projects/simpleGram
             git pull
             pwd
             mkdir -p logs
