@@ -27,6 +27,7 @@ jobs:
             docker volume create --name=media
             docker volume create --name=static
             cd projects/example-final
+            git pull
             mkdir -p logs
             mkdir -p media
             mkdir -p static
