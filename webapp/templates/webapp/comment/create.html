@@ -1,0 +1,10 @@
+{% extends 'webapp/base.html' %}
+{% block title %}Create{% endblock %}
+{% block content %}
+    <h1>Create Comment</h1>
+    <form method="POST" action="{% url "article_comment_add" %}">
+       {% csrf_token %}
+            {% include 'webapp/partial/form.html' with button_text='Create' %}
+   </form>
+
+{% endblock %}
